@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyUs = () => {
+  const { t } = useLanguage();
+  
   const reasons = [
     "Dubai-based, globally minded",
     "Industry-agnostic & impact-driven",
@@ -12,25 +15,39 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <section className="py-24 bg-gradient-to-br from-white via-amber-50/20 to-stone-50/30 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-72 h-72 bg-amber-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-1/4 w-56 h-56 bg-stone-200/30 rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tight">
             Why{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-600 to-stone-600 bg-clip-text text-transparent">
               CosmoComms?
             </span>
           </h2>
           
-          <p className="text-xl text-gray-600 mb-12">
+          <p className="text-2xl text-gray-600 mb-16 font-light leading-relaxed">
             Because the world doesn't need more noise. It needs more meaning.
           </p>
           
           <div className="space-y-6">
             {reasons.map((reason, index) => (
-              <div key={index} className="flex items-center justify-center text-left">
-                <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0" />
-                <span className="text-lg text-gray-700">{reason}</span>
+              <div 
+                key={index} 
+                className="group flex items-center justify-center text-left bg-white/60 backdrop-blur-sm rounded-2xl p-6 hover:shadow-xl transition-all duration-500 transform hover:scale-105 border border-amber-100/50"
+                style={{animationDelay: `${index * 200}ms`}}
+              >
+                <div className="p-2 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full mr-6 group-hover:scale-110 transition-transform duration-300">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <span className="text-xl text-gray-700 font-medium group-hover:text-amber-700 transition-colors duration-300">
+                  {reason}
+                </span>
               </div>
             ))}
           </div>
