@@ -39,32 +39,56 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-amber-300 mb-6">{t('services')}</h3>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <Link to="/services/public-relations" className="hover:text-amber-400 transition-colors duration-300">
+                <Link 
+                  to="/services/public-relations" 
+                  className="hover:text-amber-400 transition-colors duration-300 block"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Public Relations
                 </Link>
               </li>
               <li>
-                <Link to="/services/social-media-marketing" className="hover:text-amber-400 transition-colors duration-300">
+                <Link 
+                  to="/services/social-media-marketing" 
+                  className="hover:text-amber-400 transition-colors duration-300 block"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Social Media Marketing
                 </Link>
               </li>
               <li>
-                <Link to="/services/influencer-marketing" className="hover:text-amber-400 transition-colors duration-300">
+                <Link 
+                  to="/services/influencer-marketing" 
+                  className="hover:text-amber-400 transition-colors duration-300 block"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Influencer Marketing
                 </Link>
               </li>
               <li>
-                <Link to="/services/brand-development" className="hover:text-amber-400 transition-colors duration-300">
+                <Link 
+                  to="/services/brand-development" 
+                  className="hover:text-amber-400 transition-colors duration-300 block"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Brand Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/launch-campaigns" className="hover:text-amber-400 transition-colors duration-300">
+                <Link 
+                  to="/services/launch-campaigns" 
+                  className="hover:text-amber-400 transition-colors duration-300 block"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Launch Campaigns
                 </Link>
               </li>
               <li>
-                <Link to="/services/strategic-consulting" className="hover:text-amber-400 transition-colors duration-300">
+                <Link 
+                  to="/services/strategic-consulting" 
+                  className="hover:text-amber-400 transition-colors duration-300 block"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Strategic Consulting
                 </Link>
               </li>
