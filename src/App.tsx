@@ -10,6 +10,9 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import PublicRelations from "./pages/services/PublicRelations";
+import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
+import Chatbot from "./components/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -24,9 +27,12 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/public-relations" element={<PublicRelations />} />
+            <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Chatbot />
         </BrowserRouter>
       </LanguageProvider>
     </TooltipProvider>

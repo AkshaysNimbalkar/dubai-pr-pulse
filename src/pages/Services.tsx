@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Globe, Smartphone, Star, Target, Rocket, Brain } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -13,37 +14,43 @@ const Services = () => {
       icon: Globe,
       title: "Public Relations",
       description: "Press coverage, media relations, and thought leadership that puts you where the world is watching.",
-      gradient: "from-matcha-500 to-matcha-600"
+      gradient: "from-matcha-500 to-matcha-600",
+      link: "/services/public-relations"
     },
     {
       icon: Smartphone,
       title: "Social Media Marketing",
       description: "Scroll-stopping content, strategy, and management that builds communities and drives engagement.",
-      gradient: "from-amber-500 to-amber-600"
+      gradient: "from-amber-500 to-amber-600",
+      link: "/services/social-media-marketing"
     },
     {
       icon: Star,
       title: "Influencer Marketing",
       description: "From nano to mega, we connect your brand with credible creators who convert.",
-      gradient: "from-pink-500 to-pink-600"
+      gradient: "from-pink-500 to-pink-600",
+      link: "/services/influencer-marketing"
     },
     {
       icon: Target,
       title: "Brand Development",
       description: "Messaging, identity, and storytelling that captures the essence of your brand and fuels growth.",
-      gradient: "from-matcha-600 to-amber-600"
+      gradient: "from-matcha-600 to-amber-600",
+      link: "/services/brand-development"
     },
     {
       icon: Rocket,
       title: "Launch Campaigns",
       description: "Whether it's a product, brand, or idea—we design bold launches that make headlines.",
-      gradient: "from-amber-600 to-pink-600"
+      gradient: "from-amber-600 to-pink-600",
+      link: "/services/launch-campaigns"
     },
     {
       icon: Brain,
       title: "Strategic Consulting",
       description: "Big-picture guidance for brands ready to evolve, pivot, or grow fast.",
-      gradient: "from-pink-600 to-matcha-600"
+      gradient: "from-pink-600 to-matcha-600",
+      link: "/services/strategic-consulting"
     }
   ];
 
@@ -74,9 +81,10 @@ const Services = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div 
-                  key={index} 
-                  className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100/50 opacity-0 animate-[fade-in_1s_ease-out_forwards]"
+                <Link 
+                  key={index}
+                  to={service.link}
+                  className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100/50 opacity-0 animate-[fade-in_1s_ease-out_forwards] cursor-pointer"
                   style={{animationDelay: `${index * 200}ms`}}
                 >
                   <div className={`p-4 bg-gradient-to-r ${service.gradient} rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -88,7 +96,11 @@ const Services = () => {
                   <p className="text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
-                </div>
+                  <div className="mt-6 flex items-center text-matcha-600 group-hover:text-matcha-700 font-semibold">
+                    Learn More 
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </div>
+                </Link>
               ))}
             </div>
             

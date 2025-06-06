@@ -62,9 +62,9 @@ const Header = () => {
 
           <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
             <LanguageToggle />
-            <button className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium">
+            <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium">
               {t('letsTalk')}
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -94,9 +94,9 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
+            <Link to="/contact" className="block w-full bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium text-center">
               {t('letsTalk')}
-            </button>
+            </Link>
           </nav>
         )}
       </div>
