@@ -2,6 +2,7 @@
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -37,12 +38,36 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-amber-300 mb-6">{t('services')}</h3>
             <ul className="space-y-3 text-gray-300">
-              <li className="hover:text-amber-400 transition-colors duration-300 cursor-pointer">Public Relations</li>
-              <li className="hover:text-amber-400 transition-colors duration-300 cursor-pointer">Social Media Marketing</li>
-              <li className="hover:text-amber-400 transition-colors duration-300 cursor-pointer">Influencer Marketing</li>
-              <li className="hover:text-amber-400 transition-colors duration-300 cursor-pointer">Brand Development</li>
-              <li className="hover:text-amber-400 transition-colors duration-300 cursor-pointer">Launch Campaigns</li>
-              <li className="hover:text-amber-400 transition-colors duration-300 cursor-pointer">Strategic Consulting</li>
+              <li>
+                <Link to="/services/public-relations" className="hover:text-amber-400 transition-colors duration-300">
+                  Public Relations
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/social-media-marketing" className="hover:text-amber-400 transition-colors duration-300">
+                  Social Media Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/influencer-marketing" className="hover:text-amber-400 transition-colors duration-300">
+                  Influencer Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/brand-development" className="hover:text-amber-400 transition-colors duration-300">
+                  Brand Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/launch-campaigns" className="hover:text-amber-400 transition-colors duration-300">
+                  Launch Campaigns
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/strategic-consulting" className="hover:text-amber-400 transition-colors duration-300">
+                  Strategic Consulting
+                </Link>
+              </li>
             </ul>
           </div>
           
