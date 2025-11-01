@@ -16,6 +16,7 @@ const translations = {
     about: 'About',
     services: 'Services',
     contact: 'Contact',
+    blog: 'Blog',
     letsTalk: "Let's Talk",
     
     // Hero
@@ -24,6 +25,9 @@ const translations = {
     subtitle: 'Global Vision. Dubai Roots.',
     heroDescription: "We're rewriting the rules of public relations. Born in Dubai and built for the bold, we're a new-generation communications agency that blends strategic thinking with cultural intuition, digital innovation, and unapologetic creativity.",
     ourWork: 'Our Work',
+    globalReach: 'Global Reach',
+    dubaiBased: 'Dubai Based',
+    futureReady: 'Future Ready',
     
     // About
     aboutTitle: 'We Are CosmoComms',
@@ -36,13 +40,31 @@ const translations = {
     servicesTitle: 'PR. But Make It Future-Ready.',
     servicesDescription: 'We don\'t believe in cookie-cutter campaigns. Every brand is unique, and so is our approach. Our suite of services is designed to amplify your voice in a world that\'s constantly changing.',
     
+    // Why Us
+    whyUsTitle: 'Why CosmoComms?',
+    whyUsSubtitle: 'Because the world doesn\'t need more noise. It needs more meaning.',
+    industryKnowledge: 'Industry Knowledge & Blog Content',
+    industryKnowledgeText: 'Stay ahead of the curve with insights from our PR experts. Our blog covers the latest trends, strategies, and insider tips across industries.',
+    
+    // Startup PR Kit
+    startupKitTitle: 'Startup PR Kit',
+    startupKitSubtitle: 'New to PR? No problem.',
+    startupKitText: 'We help startups build from zero: media visibility, brand credibility, and influencer buzz. Whether you\'re launching with a dream and a laptop, or scaling fast—we\'ve got you covered.',
+    founderMessage: 'Built by a PR girl who\'s been where you are—launching something with a dream, a laptop, and no roadmap.',
+    
     // Contact
     contactTitle: 'Let\'s Work Together',
     contactDescription: 'Whether you\'re a visionary founder, a growing business, or an established brand looking for a fresh perspective, CosmoComms PR is here to help you elevate.',
     getStarted: 'Get Started Today',
+    emailUs: 'Email Us',
+    basedIn: 'Based in',
+    globalReachTitle: 'Global Reach',
+    worldwideServices: 'Worldwide Services',
     
     // Footer
     copyright: '© 2025 CosmoComms PR. All rights reserved. Built for the bold.',
+    quickLinks: 'Quick Links',
+    followUs: 'Follow Us',
   },
   ar: {
     // Header
@@ -50,6 +72,7 @@ const translations = {
     about: 'من نحن',
     services: 'خدماتنا',
     contact: 'تواصل معنا',
+    blog: 'المدونة',
     letsTalk: 'لنتحدث',
     
     // Hero
@@ -58,6 +81,9 @@ const translations = {
     subtitle: 'رؤية عالمية. جذور دبي.',
     heroDescription: 'نحن نعيد كتابة قواعد العلاقات العامة. وُلدنا في دبي وبُنينا للجريئين، نحن وكالة اتصالات من الجيل الجديد تمزج بين التفكير الاستراتيجي والحدس الثقافي والابتكار الرقمي والإبداع الجريء.',
     ourWork: 'أعمالنا',
+    globalReach: 'انتشار عالمي',
+    dubaiBased: 'مقرها دبي',
+    futureReady: 'جاهز للمستقبل',
     
     // About
     aboutTitle: 'نحن كوزمو كومز',
@@ -70,13 +96,31 @@ const translations = {
     servicesTitle: 'علاقات عامة. لكن اجعلها جاهزة للمستقبل.',
     servicesDescription: 'لا نؤمن بالحملات المقولبة. كل علامة تجارية فريدة، وكذلك نهجنا. تم تصميم مجموعة خدماتنا لتضخيم صوتك في عالم يتغير باستمرار.',
     
+    // Why Us
+    whyUsTitle: 'لماذا كوزمو كومز؟',
+    whyUsSubtitle: 'لأن العالم لا يحتاج إلى المزيد من الضجيج. إنه يحتاج إلى المزيد من المعنى.',
+    industryKnowledge: 'معرفة الصناعة ومحتوى المدونة',
+    industryKnowledgeText: 'ابق في صدارة المنحنى مع رؤى من خبراء العلاقات العامة لدينا. تغطي مدونتنا أحدث الاتجاهات والاستراتيجيات والنصائح الداخلية عبر الصناعات.',
+    
+    // Startup PR Kit
+    startupKitTitle: 'مجموعة العلاقات العامة للشركات الناشئة',
+    startupKitSubtitle: 'جديد في العلاقات العامة؟ لا مشكلة.',
+    startupKitText: 'نساعد الشركات الناشئة على البناء من الصفر: رؤية وسائل الإعلام، ومصداقية العلامة التجارية، وضجة المؤثرين. سواء كنت تطلق بحلم وجهاز كمبيوتر محمول، أو تتوسع بسرعة—نحن هنا لدعمك.',
+    founderMessage: 'بناه فتاة العلاقات العامة التي كانت في مكانك—إطلاق شيء ما بحلم، وجهاز كمبيوتر محمول، وبدون خريطة طريق.',
+    
     // Contact
     contactTitle: 'لنعمل معاً',
     contactDescription: 'سواء كنت مؤسساً ذا رؤية، أو شركة نامية، أو علامة تجارية راسخة تبحث عن منظور جديد، فإن كوزمو كومز للعلاقات العامة هنا لمساعدتك على الارتقاء.',
     getStarted: 'ابدأ اليوم',
+    emailUs: 'راسلنا',
+    basedIn: 'مقرنا في',
+    globalReachTitle: 'انتشار عالمي',
+    worldwideServices: 'خدمات عالمية',
     
     // Footer
     copyright: '© ٢٠٢٥ كوزمو كومز للعلاقات العامة. جميع الحقوق محفوظة. مبني للجريئين.',
+    quickLinks: 'روابط سريعة',
+    followUs: 'تابعنا',
   }
 };
 

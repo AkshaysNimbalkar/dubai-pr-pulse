@@ -57,17 +57,17 @@ const Hero = () => {
           <div className="mt-20 flex items-center justify-center space-x-12 rtl:space-x-reverse text-gray-500 opacity-0 animate-[fade-in_1s_ease-out_2.6s_forwards]">
             <div className="flex items-center group hover:text-matcha-600 transition-colors duration-300">
               <Globe className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="font-medium">Global Reach</span>
+              <span className="font-medium">{t('globalReach')}</span>
             </div>
             <div className="h-6 w-px bg-gray-300"></div>
             <div className="flex items-center group hover:text-amber-600 transition-colors duration-300">
               <span className="text-2xl mr-2">🏢</span>
-              <span className="font-medium">Dubai Based</span>
+              <span className="font-medium">{t('dubaiBased')}</span>
             </div>
             <div className="h-6 w-px bg-gray-300"></div>
             <div className="flex items-center group hover:text-pink-600 transition-colors duration-300">
               <span className="text-2xl mr-2">🚀</span>
-              <span className="font-medium">Future Ready</span>
+              <span className="font-medium">{t('futureReady')}</span>
             </div>
           </div>
         </div>

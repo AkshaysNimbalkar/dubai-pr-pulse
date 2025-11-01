@@ -33,15 +33,15 @@ const Contact = () => {
                 <div className="p-3 bg-gradient-to-r from-matcha-500 to-matcha-600 rounded-full w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Email Us</h3>
-                <p className="text-matcha-600 font-medium">hello@cosmocommspr.com</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('emailUs')}</h3>
+                <p className="text-matcha-600 font-medium">pranjali@cosmocommspr.com</p>
               </div>
               
               <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform hover:scale-105">
                 <div className="p-3 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Based in</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('basedIn')}</h3>
                 <p className="text-amber-600 font-medium">Dubai, UAE</p>
               </div>
               
@@ -49,8 +49,8 @@ const Contact = () => {
                 <div className="p-3 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Global Reach</h3>
-                <p className="text-pink-600 font-medium">Worldwide Services</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('globalReachTitle')}</h3>
+                <p className="text-pink-600 font-medium">{t('worldwideServices')}</p>
               </div>
             </div>
             

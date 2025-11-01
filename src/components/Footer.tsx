@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
               <img 
@@ -28,68 +28,34 @@ const Footer = () => {
             <p className="text-gray-300 text-lg leading-relaxed max-w-sm">
               New Generation Communications. Global Vision. Dubai Roots.
             </p>
-            <div className="flex space-x-4 rtl:space-x-reverse">
-              <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-                <span className="text-lg font-bold">C</span>
-              </div>
-            </div>
           </div>
           
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-amber-300 mb-6">{t('services')}</h3>
+            <h3 className="text-2xl font-bold text-amber-300 mb-6">{t('quickLinks')}</h3>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <Link 
-                  to="/services/public-relations" 
-                  className="hover:text-amber-400 transition-colors duration-300 block"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Public Relations
+                <Link to="/" className="hover:text-amber-400 transition-colors duration-300 block">
+                  {t('home')}
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/services/social-media-marketing" 
-                  className="hover:text-amber-400 transition-colors duration-300 block"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Social Media Marketing
+                <Link to="/about" className="hover:text-amber-400 transition-colors duration-300 block">
+                  {t('about')}
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/services/influencer-marketing" 
-                  className="hover:text-amber-400 transition-colors duration-300 block"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Influencer Marketing
+                <Link to="/services" className="hover:text-amber-400 transition-colors duration-300 block">
+                  {t('services')}
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/services/brand-development" 
-                  className="hover:text-amber-400 transition-colors duration-300 block"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Brand Development
+                <Link to="/blog" className="hover:text-amber-400 transition-colors duration-300 block">
+                  {t('blog')}
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/services/launch-campaigns" 
-                  className="hover:text-amber-400 transition-colors duration-300 block"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Launch Campaigns
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/services/strategic-consulting" 
-                  className="hover:text-amber-400 transition-colors duration-300 block"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Strategic Consulting
+                <Link to="/contact" className="hover:text-amber-400 transition-colors duration-300 block">
+                  {t('contact')}
                 </Link>
               </li>
             </ul>
@@ -102,7 +68,7 @@ const Footer = () => {
                 <div className="p-2 bg-gradient-to-r from-amber-500 to-amber-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-lg">hello@cosmocommspr.com</span>
+                <a href="mailto:pranjali@cosmocommspr.com" className="text-lg">pranjali@cosmocommspr.com</a>
               </div>
               <div className="flex items-center group hover:text-amber-400 transition-colors duration-300">
                 <div className="p-2 bg-gradient-to-r from-stone-500 to-stone-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -110,6 +76,23 @@ const Footer = () => {
                 </div>
                 <span className="text-lg">Dubai, UAE</span>
               </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-pink-300 mb-6">{t('followUs')}</h3>
+            <div className="space-y-4">
+              <a 
+                href="https://www.instagram.com/cosmocomms_pr/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center group hover:text-pink-400 transition-colors duration-300 text-gray-300"
+              >
+                <div className="p-3 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <Instagram className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-lg">@cosmocomms_pr</span>
+              </a>
             </div>
           </div>
         </div>

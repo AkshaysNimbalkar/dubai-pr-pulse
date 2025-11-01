@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import PublicRelations from "./pages/services/PublicRelations";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/services/launch-campaigns" element={<LaunchCampaigns />} />
             <Route path="/services/strategic-consulting" element={<StrategicConsulting />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Chatbot />

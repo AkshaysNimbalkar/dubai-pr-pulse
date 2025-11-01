@@ -25,15 +25,19 @@ const WhyUs = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tight">
-            Why{' '}
-            <span className="bg-gradient-to-r from-amber-600 to-stone-600 bg-clip-text text-transparent">
-              CosmoComms?
-            </span>
+            {t('whyUsTitle')}
           </h2>
           
-          <p className="text-2xl text-gray-600 mb-16 font-light leading-relaxed">
-            Because the world doesn't need more noise. It needs more meaning.
+          <p className="text-2xl text-gray-600 mb-8 font-light leading-relaxed">
+            {t('whyUsSubtitle')}
           </p>
+          
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 mb-16 max-w-3xl mx-auto border border-amber-100/50">
+            <h3 className="text-2xl font-bold text-amber-700 mb-4">{t('industryKnowledge')}</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {t('industryKnowledgeText')}
+            </p>
+          </div>
           
           <div className="space-y-6">
             {reasons.map((reason, index) => (
