@@ -49,6 +49,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/startup-pr-kit" className="hover:text-amber-400 transition-colors duration-300 block">
+                  Startup PR Kit
+                </Link>
+              </li>
+              <li>
                 <Link to="/blog" className="hover:text-amber-400 transition-colors duration-300 block">
                   {t('blog')}
                 </Link>
@@ -68,7 +73,7 @@ const Footer = () => {
                 <div className="p-2 bg-gradient-to-r from-amber-500 to-amber-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
-                <a href="mailto:pranjali@cosmocommspr.com" className="text-lg">pranjali@cosmocommspr.com</a>
+                <a href="mailto:pranjali@cosmocommspr.com" className="text-lg hover:text-amber-300 transition-colors">pranjali@cosmocommspr.com</a>
               </div>
               <div className="flex items-center group hover:text-amber-400 transition-colors duration-300">
                 <div className="p-2 bg-gradient-to-r from-stone-500 to-stone-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">

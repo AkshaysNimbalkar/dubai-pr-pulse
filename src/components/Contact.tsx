@@ -56,10 +56,10 @@ const Contact = () => {
             <div className="relative z-10">
               <h3 className="text-3xl font-bold mb-6 text-amber-300">Start Your Story With Us</h3>
               <a 
-                href="mailto:hello@cosmocommspr.com" 
+                href="mailto:pranjali@cosmocommspr.com" 
                 className="group text-2xl text-amber-400 hover:text-amber-300 transition-all duration-300 font-semibold inline-flex items-center"
               >
-                hello@cosmocommspr.com
+                pranjali@cosmocommspr.com
                 <Mail className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>

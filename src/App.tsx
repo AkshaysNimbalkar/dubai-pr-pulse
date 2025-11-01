@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import StartupPRKit from "./pages/StartupPRKit";
 import NotFound from "./pages/NotFound";
 import PublicRelations from "./pages/services/PublicRelations";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/services/brand-development" element={<BrandDevelopment />} />
             <Route path="/services/launch-campaigns" element={<LaunchCampaigns />} />
             <Route path="/services/strategic-consulting" element={<StrategicConsulting />} />
+            <Route path="/startup-pr-kit" element={<StartupPRKit />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
