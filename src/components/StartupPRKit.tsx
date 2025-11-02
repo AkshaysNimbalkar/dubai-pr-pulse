@@ -265,6 +265,7 @@ const StartupPRKit = () => {
                   <p className="text-lg text-gray-800">{problem}</p>
                 </div>
               ))}
+            </div>
 
             <div className="text-center bg-gradient-to-r from-matcha-500 to-pink-500 text-white p-8 rounded-3xl">
                <p className="text-2xl font-bold">What if you could get media coverage without the agency price tag?</p>
