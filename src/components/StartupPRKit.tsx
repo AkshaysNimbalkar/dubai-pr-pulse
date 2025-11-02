@@ -253,13 +253,13 @@ const StartupPRKit = () => {
             <p className="text-2xl text-center text-gray-700 mb-12">You know the feeling:</p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {{
+              { [
                 'Your competitor just got featured in TechCrunch (again)',
                 "Journalists ignore your emails like they're spam",
                 "You can't afford a AED 50,000/month agency retainer",
                 "Your product is amazing but nobody knows you exist",
                 "You're too busy building to learn PR from scratch"
-              }.map((problem, idx) => (
+              ].map((problem, idx) => (
                 <div key={idx} className="flex items-start bg-red-50 p-6 rounded-2xl border-2 border-red-100">
                   <X className="w-6 h-6 text-red-500 mr-4 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-800">{problem}</p>
@@ -267,8 +267,8 @@ const StartupPRKit = () => {
               ))}
 
             <div className="text-center bg-gradient-to-r from-matcha-500 to-pink-500 text-white p-8 rounded-3xl">
-              <p className="text-2xl font-bold">What if you could get media coverage without the agency price tag?</p>
-            </div>
+               <p className="text-2xl font-bold">What if you could get media coverage without the agency price tag?</p>
+             </div>
           </div>
         </div>
       </section>
