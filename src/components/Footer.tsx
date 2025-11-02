@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Mail, MapPin, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
@@ -19,11 +17,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
-              <img 
-                src="/lovable-uploads/f0fd2259-250f-4163-bcb0-852f05d5061c.png" 
-                alt="CosmoComms PR" 
-                className="h-12 w-auto filter brightness-0 invert"
-              />
+              <img src="/lovable-uploads/f0fd2259-250f-4163-bcb0-852f05d5061c.png" alt="CosmoComms PR" className="h-12 w-auto filter brightness-0 invert" />
             </div>
             <p className="text-gray-300 text-lg leading-relaxed max-w-sm">
               New Generation Communications. Global Vision. Dubai Roots.

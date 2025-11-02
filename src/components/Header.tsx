@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -11,7 +11,7 @@ interface HeaderProps {
 const Header = ({ activeSection }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { t } = useLanguage();
+  const { t, tr } = useLanguage();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -26,7 +26,7 @@ const Header = ({ activeSection }: HeaderProps) => {
   const navItems = [
     { path: '/', section: 'hero', label: t('home') },
     { path: '/about', section: 'about', label: t('about') },
-    { path: '/startup-pr-kit', section: 'startup-kit', label: 'Startup PR Kit' },
+    { path: '/startup-pr-kit', section: 'startup-kit', label: tr('startup.hero.label') || 'Startup PR Kit' },
     { path: '/services', section: 'services', label: t('services') },
     { path: '/blog', section: 'blog', label: t('blog') },
     { path: '/contact', section: 'contact', label: t('contact') }

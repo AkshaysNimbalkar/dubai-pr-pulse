@@ -1,202 +1,22 @@
-import React, { useState } from 'react';
-import Header from '../components/Header';
+import { useState } from 'react';
+import Header from './Header';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Rocket, Check, X, Star, Clock, Shield, Zap, Award, Users, TrendingUp, Target, MessageSquare, DollarSign, CheckCircle2 } from 'lucide-react';
 
 const StartupPRKit = () => {
   const [selectedPlan, setSelectedPlan] = useState('guided');
+  const { language, t, tr } = useLanguage();
 
-  const modules = [
-    {
-      title: 'Module 1: The Media Magnet Framework™',
-      subtitle: 'Your Story Roadmap to Headlines',
-      features: [
-        'The Angle Finder: Discover your unique story hook in 20 minutes',
-        '5 Press Release Templates: Product launch, funding, milestone, partnership, award',
-        "The Founder Story Builder: Create your Wikipedia-worthy bio",
-        "One-Liner Generator: Craft your startup's unforgettable tagline",
-        'BONUS: 10 real press releases that got coverage'
-      ]
-    },
-    {
-      title: 'Module 2: The Journalist Black Book',
-      subtitle: 'Skip the Slush Pile',
-      features: [
-        '100+ Media Contacts: Tech, business, and startup journalists in UAE & globally',
-        'The Golden Email Formula: 73% open rate templates',
-        'Follow-Up Framework: 3-touch sequence that gets responses',
-        'Subject Line Swipe File: 50 proven winners',
-        'Timing Guide: Best hours/days for each region'
-      ]
-    },
-    {
-      title: 'Module 3: Zero-Budget Buzz Builder',
-      subtitle: 'PR Hacks That Cost Nothing',
-      features: [
-        '15 Free PR Tactics: From newsjacking to trend riding',
-        "The Event Hijack Method: Leverage others' spotlight ethically",
-        'Product Launch Amplifier: Turn releases into media events',
-        'FOMO Creation Kit: Build urgency without being sleazy',
-        'Partnership PR Playbook: Double your reach through collaborations'
-      ]
-    },
-    {
-      title: 'Module 4: Influencer Activation Playbook',
-      subtitle: "When You Can't Afford the Kardashians",
-      features: [
-        'Micro-Influencer Finder: Identify your perfect ambassadors',
-        'The Barter Blueprint: Trade product for promotion',
-        "DM Scripts That Work: Get 40% response rates",
-        'Collaboration Contracts: Protect yourself legally',
-        'ROI Tracking Sheet: Measure impact without expensive tools'
-      ]
-    },
-    {
-      title: 'Module 5: Crisis Prevention Plan',
-      subtitle: 'Before Things Go Sideways',
-      features: [
-        '5 Startup Crisis Scripts: Bad reviews, delays, pivots, layoffs, controversies',
-        'Emergency Statement Templates: Ready-to-edit responses',
-        'The Apology Framework: Say sorry without legal liability',
-        'Reputation Recovery Roadmap: Bounce back stronger',
-        '24-Hour Response Protocol: Your emergency action plan'
-      ]
-    },
-    {
-      title: 'Module 6: Metrics That Matter Dashboard',
-      subtitle: 'Prove Your PR Works',
-      features: [
-        'Free Tracking Tools Setup: Monitor coverage without paid tools',
-        'Investor-Ready KPIs: The 5 metrics VCs actually care about',
-        'Report Templates: Look professional in minutes',
-        'ROI Calculator: Show real business impact',
-        'Pitch Deck PR Slide: Template for your investor deck'
-      ]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      id: 'diy',
-      name: 'DIY STARTER',
-      price: 'AED 997',
-      period: 'One-time payment',
-      description: 'Everything you need to start',
-      features: [
-        'All 6 modules (lifetime access)',
-        '50+ templates & scripts',
-        'Video walkthroughs',
-        '30-day email support',
-        'Quarterly updates'
-      ],
-      ideal: 'Bootstrapped founders, solopreneurs, pre-seed startups',
-      cta: 'START TODAY'
-    },
-    {
-      id: 'guided',
-      name: 'GUIDED LAUNCH',
-      price: 'AED 2,997',
-      period: 'One-time payment',
-      popular: true,
-      description: 'DIY Starter PLUS hands-on help',
-      features: [
-        'Everything in DIY Starter',
-        '2 x 60-min strategy calls',
-        'Custom media list (50 contacts)',
-        'Press release review & editing',
-        '90-day priority support',
-        'Campaign planning session'
-      ],
-      ideal: 'First-time founders, product launches, seed-stage startups',
-      cta: 'LEVEL UP'
-    },
-    {
-      id: 'partner',
-      name: 'PR PARTNER',
-      price: 'AED 7,997/month',
-      period: 'Month-to-month, cancel anytime',
-      description: 'We become your PR team',
-      features: [
-        'Everything in Guided Launch',
-        'Weekly 30-min check-ins',
-        '20 media pitches/month',
-        'Full influencer outreach',
-        'Crisis hotline access',
-        'Monthly coverage reports',
-        'Content creation (2 pieces)'
-      ],
-      ideal: 'Funded startups, busy founders, aggressive growth mode',
-      cta: 'APPLY NOW'
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: 'From unknown to TechCrunch in 30 days',
-      text: 'The templates alone saved me 100 hours. Got our Series A announcement picked up by 5 major outlets.',
-      author: 'Sarah Chen',
-      role: 'Founder @ FinFlow',
-      featured: 'TechCrunch, Forbes Middle East, Wamda'
-    },
-    {
-      quote: '50,000 impressions from one press release',
-      text: "Couldn't afford an agency. This kit got us more coverage than startups with huge PR budgets.",
-      author: 'Ahmed Al Rashid',
-      role: 'CEO @ Souq Local',
-      featured: 'Arabian Business, Entrepreneur ME, Gulf News'
-    },
-    {
-      quote: 'Closed our seed round after getting featured',
-      text: 'Investors started reaching out after our Entrepreneur Middle East feature. Best ROI ever.',
-      author: 'Maria Santos',
-      role: 'Co-founder @ EdTech Plus',
-      raised: 'Raised: AED 3.6M seed round'
-    }
-  ];
-
-  const bonuses = [
-    {
-      title: 'Dubai Media Masterlist',
-      value: 'AED 497',
-      features: ['200+ UAE journalist contacts', 'Regional publication guide', 'Arabic media templates']
-    },
-    {
-      title: 'Startup Event Calendar',
-      value: 'AED 297',
-      features: ['12-month PR opportunity calendar', 'Key Dubai/UAE tech events', 'Speaking opportunity tracker']
-    },
-    {
-      title: 'Investor Relations Toolkit',
-      value: 'AED 397',
-      features: ['Funding announcement templates', 'Investor update formats', 'Stakeholder communication guide']
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'Who is this for?',
-      answer: "Startup founders, marketing teams, and entrepreneurs who want media coverage without hiring an expensive agency. If you can follow a recipe, you can do PR with our kit."
-    },
-    {
-      question: 'I have zero PR experience. Will this work?',
-      answer: "Absolutely. Everything is step-by-step with examples, templates, and video guides. We assume you're starting from scratch."
-    },
-    {
-      question: 'How is this different from hiring a PR agency?',
-      answer: "Agencies in Dubai charge AED 20,000-50,000/month and do the work for you. We teach you the system so you can do it yourself (or train someone on your team) for a fraction of the cost."
-    },
-    {
-      question: 'What if my product is boring?',
-      answer: "Every product solves a problem. Problems are stories. Stories get coverage. We'll help you find your angle—even if you sell B2B accounting software."
-    },
-    {
-      question: 'How quickly will I see results?',
-      answer: "Most users get their first media mention within 30 days of implementing the system. Your timeline depends on your industry and effort level."
-    },
-    {
-      question: 'Is this specific to Dubai/UAE?',
-      answer: "While we include specific Dubai/UAE resources, the strategies work globally. You get both regional and international media tactics."
-    }
-  ];
+  const hero = tr('startup.hero') || {};
+  const problems = tr('startup.problems') || [];
+  const solution = tr('startup.solution') || {};
+  const stats = tr('startup.stats') || [];
+  const modules = tr('startup.modules') || [];
+  const pricingPlans = tr('startup.pricingPlans') || [];
+  const testimonials = tr('startup.testimonials') || [];
+  const bonuses = tr('startup.bonuses') || [];
+  const faqs = tr('startup.faqs') || [];
+  const ctas = tr('startup.ctas') || {};
 
   return (
     <div className="min-h-screen">
@@ -212,30 +32,38 @@ const StartupPRKit = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center bg-gradient-to-r from-pink-100 to-matcha-100 rounded-full px-6 py-3 mb-6">
               <Rocket className="w-5 h-5 text-pink-600 mr-3" />
-              <span className="text-pink-700 font-semibold">Startup PR Kit</span>
+              <span className="text-pink-700 font-semibold">{hero.label || 'Startup PR Kit'}</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
-              Launch Loud. Get Found.<br />Build Trust.
+              {hero.h1
+                ? hero.h1.split('\n').map((line: string, i: number) => (
+                    <span key={i} className="block">{line}</span>
+                  ))
+                : (
+                  <>
+                    Launch Loud. Get Found.<br />Build Trust.
+                  </>
+                )}
             </h1>
-            <p className="text-2xl text-gray-600 mb-4">(Even on a Ramen Budget)</p>
+            <p className="text-2xl text-gray-600 mb-4">{hero.subtitle || '(Even on a Ramen Budget)'}</p>
             <div className="max-w-3xl mx-auto mb-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">New to PR? No problem.</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">{hero.introHeading || 'New to PR? No problem.'}</h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                We help startups go from invisible to inevitable—building media visibility, brand credibility, and influencer buzz. Whether you're launching from your garage or scaling from Series A, we've got your back.
+                {hero.introText || "We help startups go from invisible to inevitable—building media visibility, brand credibility, and influencer buzz."}
               </p>
             </div>
             <div className="bg-gradient-to-r from-pink-500 via-matcha-500 to-amber-500 text-white p-8 rounded-3xl shadow-2xl max-w-3xl mx-auto mb-8">
               <p className="text-lg font-medium leading-relaxed italic">
-                Built by a PR girl who's been there—launching with nothing but WiFi, caffeine, and pure determination.
+                {hero.founderMessage || "Built by a PR girl who's been there—launching with nothing but WiFi, caffeine, and pure determination."}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#pricing" className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                GET INSTANT ACCESS
+                {hero.ctaPrimary || 'GET INSTANT ACCESS'}
                 <span className="ml-3 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
               </a>
               <a href="#pricing" className="bg-white text-gray-900 border-2 border-gray-300 px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl transition-all duration-500 transform hover:scale-110">
-                SEE PRICING
+                {hero.ctaSecondary || 'SEE PRICING'}
               </a>
             </div>
           </div>
@@ -252,13 +80,7 @@ const StartupPRKit = () => {
             <p className="text-2xl text-center text-gray-700 mb-12">You know the feeling:</p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
-              { [
-                'Your competitor just got featured in TechCrunch (again)',
-                "Journalists ignore your emails like they're spam",
-                "You can't afford a AED 50,000/month agency retainer",
-                "Your product is amazing but nobody knows you exist",
-                "You're too busy building to learn PR from scratch"
-              ].map((problem, idx) => (
+              {problems.map((problem: string, idx: number) => (
                 <div key={idx} className="flex items-start bg-red-50 p-6 rounded-2xl border-2 border-red-100">
                   <X className="w-6 h-6 text-red-500 mr-4 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-800">{problem}</p>
@@ -277,27 +99,17 @@ const StartupPRKit = () => {
       <section className="py-24 bg-gradient-to-br from-matcha-50 to-pink-50">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">Introducing the Startup PR Kit</h2>
-            <p className="text-3xl font-semibold text-matcha-600 mb-8">Your Complete PR System in a Box</p>
-            <p className="text-xl text-gray-700 mb-12">No fluff. No theory. Just battle-tested templates, scripts, and strategies that get results.</p>
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">{solution.title || 'Introducing the Startup PR Kit'}</h2>
+            <p className="text-3xl font-semibold text-matcha-600 mb-8">{solution.subtitle || 'Your Complete PR System in a Box'}</p>
+            <p className="text-xl text-gray-700 mb-12">{solution.description || 'No fluff. No theory. Just battle-tested templates, scripts, and strategies that get results.'}</p>
 
             <div className="grid md:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="text-4xl font-bold text-matcha-600 mb-2">6</div>
-                <p className="text-gray-700 font-semibold">Complete Modules</p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="text-4xl font-bold text-pink-600 mb-2">50+</div>
-                <p className="text-gray-700 font-semibold">Templates</p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="text-4xl font-bold text-amber-600 mb-2">∞</div>
-                <p className="text-gray-700 font-semibold">Lifetime Updates</p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="text-4xl font-bold text-matcha-600 mb-2">100%</div>
-                <p className="text-gray-700 font-semibold">Real Examples</p>
-              </div>
+              {stats.map((s: any, i: number) => (
+                <div key={i} className="bg-white p-6 rounded-2xl shadow-lg">
+                  <div className="text-4xl font-bold text-matcha-600 mb-2">{s.value}</div>
+                  <p className="text-gray-700 font-semibold">{s.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -333,7 +145,7 @@ const StartupPRKit = () => {
       <section id="pricing" className="py-24 bg-gradient-to-br from-gray-900 to-stone-900 text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16">Choose Your PR Journey</h2>
+            <h2 className="text-5xl font-bold text-center mb-16">{tr('startup.solution.title') || 'Choose Your PR Journey'}</h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan) => (
@@ -382,7 +194,7 @@ const StartupPRKit = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">Founders Who Made Headlines</h2>
+            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">{tr('startup.testimonials') ? 'Founders Who Made Headlines' : 'Founders Who Made Headlines'}</h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, idx) => (
@@ -412,7 +224,7 @@ const StartupPRKit = () => {
       <section className="py-24 bg-gradient-to-br from-pink-50 to-matcha-50">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-6">Order Today & Get These FREE Bonuses</h2>
+            <h2 className="text-5xl font-bold text-center text-gray-900 mb-6">{tr('startup.bonuses') ? 'Order Today & Get These FREE Bonuses' : 'Order Today & Get These FREE Bonuses'}</h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {bonuses.map((bonus, idx) => (
@@ -435,7 +247,7 @@ const StartupPRKit = () => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-500 to-pink-500 text-white p-8 rounded-3xl text-center">
-              <p className="text-3xl font-bold">Total Bonus Value: AED 1,191</p>
+              <p className="text-3xl font-bold">{t('getStarted') || 'Total Bonus Value: AED 1,191'}</p>
               <p className="text-xl mt-2">Yours FREE with any package</p>
             </div>
           </div>
@@ -446,7 +258,7 @@ const StartupPRKit = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">Questions? We've Got Answers</h2>
+            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">{tr('startup.faqs') ? "Questions? We've Got Answers" : "Questions? We've Got Answers"}</h2>
 
             <div className="space-y-6">
               {faqs.map((faq, idx) => (
@@ -484,18 +296,18 @@ const StartupPRKit = () => {
       <section className="py-24 bg-gradient-to-br from-gray-900 to-stone-900 text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-6xl font-bold mb-8">Ready to Make Headlines?</h2>
-            <p className="text-2xl mb-4">Stop watching your competitors get all the coverage.</p>
-            <p className="text-2xl mb-12">Your story deserves to be heard.</p>
+            <h2 className="text-6xl font-bold mb-8">{ctas.finalCta || 'Ready to Make Headlines?'}</h2>
+            <p className="text-2xl mb-4">{t('contactDescription') || 'Stop watching your competitors get all the coverage.'}</p>
+            <p className="text-2xl mb-12">{t('contactTitle') || 'Your story deserves to be heard.'}</p>
 
             <a href="#pricing" className="inline-block group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-16 py-6 rounded-full font-bold text-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 mb-8">
-              GET THE STARTUP PR KIT NOW
+              {ctas.finalCta || 'GET THE STARTUP PR KIT NOW'}
               <span className="ml-3 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
             </a>
             <div className="mt-12 pt-12 border-t border-white/20">
               <p className="text-xl mb-4">Still on the fence?</p>
-              <a href="mailto:pranjali@cosmocommspr.com" className="text-amber-400 hover:text-amber-300 font-semibold text-lg underline">
-                Book a free 15-minute "Is This Right for Me?" call
+              <a href={`mailto:${ctas.email || 'pranjali@cosmocommspr.com'}`} className="text-amber-400 hover:text-amber-300 font-semibold text-lg underline">
+                {ctas.bookCall || 'Book a free 15-minute "Is This Right for Me?" call'}
               </a>
               <p className="text-gray-400 mt-2">No sales pressure. Just honest advice about your PR needs.</p>
             </div>
@@ -545,7 +357,7 @@ const StartupPRKit = () => {
               P.S. — Every day you wait, your competitor gets another headline. The journalists on our media list won't wait for you to be ready. They're writing stories about someone else right now. Don't let it be your competition.
             </p>
             <a href="#pricing" className="inline-block bg-white text-gray-900 px-12 py-4 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-              Claim Your Startup PR Kit →
+              {ctas.claimCta || 'Claim Your Startup PR Kit →'}
             </a>
           </div>
         </div>
