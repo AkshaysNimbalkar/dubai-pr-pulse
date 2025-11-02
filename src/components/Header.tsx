@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -76,14 +75,15 @@ const Header = ({ activeSection }: HeaderProps) => {
                   key={item.path}
                   to={item.path}
                   onClick={(e) => handleNavClick(e, item.section)}
+                  aria-current={isActive ? 'page' : undefined}
                   className={`text-gray-700 hover:text-matcha-600 transition-all duration-300 font-medium relative group ${
-                    isActive ? 'text-matcha-600' : ''
+                    isActive ? 'text-matcha-700 font-semibold' : ''
                   }`}
                 >
                   {item.label}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-matcha-600 transition-all duration-300 ${
+                  <span className={`absolute -bottom-2 left-0 h-1 bg-matcha-600 rounded-full transition-all duration-300 ${
                     isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
+                  }`} />
                 </Link>
               );
             })}
@@ -124,8 +124,9 @@ const Header = ({ activeSection }: HeaderProps) => {
                     handleNavClick(e, item.section);
                     setIsMenuOpen(false);
                   }}
+                  aria-current={isActive ? 'page' : undefined}
                   className={`block text-gray-700 hover:text-matcha-600 transition-colors font-medium ${
-                    isActive ? 'text-matcha-600' : ''
+                    isActive ? 'text-matcha-700 font-semibold' : ''
                   }`}
                 >
                   {item.label}

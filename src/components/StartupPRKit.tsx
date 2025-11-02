@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Rocket, Check, X, Star, Clock, Shield, Zap, Award, Users, TrendingUp, Target, MessageSquare, DollarSign, CheckCircle2 } from 'lucide-react';
 
 const StartupPRKit = () => {
@@ -551,8 +550,6 @@ const StartupPRKit = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

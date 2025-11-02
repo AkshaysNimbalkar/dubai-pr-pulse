@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -39,13 +38,15 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header activeSection={activeSection} />
-      <div id="hero"><Hero /></div>
-      <div id="about"><About /></div>
-      <div id="startup-kit"><StartupPRKit /></div>
-      <div id="services"><Services /></div>
-      <div id="why-us"><WhyUs /></div>
-      <div id="instagram"><InstagramFeed /></div>
-      <div id="contact"><Contact /></div>
+      <main>
+        <div id="hero"><Hero /></div>
+        <div id="about"><About /></div>
+        <div id="startup-kit"><StartupPRKit /></div>
+        <div id="services"><Services /></div>
+        <div id="why-us"><WhyUs /></div>
+        <div id="instagram"><InstagramFeed /></div>
+        <div id="contact"><Contact /></div>
+      </main>
       <Footer />
     </div>
   );
