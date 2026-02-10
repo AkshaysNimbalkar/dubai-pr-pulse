@@ -11,23 +11,23 @@ const SocialMediaMarketing = () => {
   const features = [
     {
       icon: Camera,
-      title: "Content Creation",
-      description: "Visually stunning, scroll-stopping content that captures attention and drives engagement across all platforms."
+      title: t('smmContentCreation'),
+      description: t('smmContentCreationDesc')
     },
     {
       icon: BarChart3,
-      title: "Strategy & Analytics",
-      description: "Data-driven strategies that maximize ROI and turn followers into loyal customers with measurable results."
+      title: t('smmStrategyAnalytics'),
+      description: t('smmStrategyAnalyticsDesc')
     },
     {
       icon: Users2,
-      title: "Community Management",
-      description: "Build authentic relationships with your audience through meaningful conversations and community building."
+      title: t('smmCommunityMgmt'),
+      description: t('smmCommunityMgmtDesc')
     },
     {
       icon: Zap,
-      title: "Paid Social Campaigns",
-      description: "Targeted advertising campaigns that reach the right audience at the right moment with precision."
+      title: t('smmPaidSocial'),
+      description: t('smmPaidSocialDesc')
     }
   ];
 
@@ -44,7 +44,7 @@ const SocialMediaMarketing = () => {
           <div className="max-w-4xl mx-auto">
             <Link to="/services" className="inline-flex items-center text-amber-600 hover:text-amber-700 mb-8 group">
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Services
+              {t('backToServices')}
             </Link>
 
             <div className="text-center mb-16">
@@ -53,11 +53,11 @@ const SocialMediaMarketing = () => {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-amber-600 to-pink-600 bg-clip-text text-transparent">
-                  Social Media Marketing
+                  {t('socialMediaMarketing')}
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Social media isn't just about posting—it's about creating movements. We craft digital experiences that turn passive scrollers into passionate brand advocates. From viral content to community building, we make your brand the conversation starter.
+                {t('smmPageDesc')}
               </p>
             </div>
 
@@ -74,13 +74,13 @@ const SocialMediaMarketing = () => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-100 to-pink-100 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Go Viral?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('smmCtaTitle')}</h3>
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                From Instagram stories to TikTok trends, we know what makes content shareable and brands unforgettable.
+                {t('smmCtaDesc')}
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
-                Let's Create Together
-              </Link>
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Social Media Marketing Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in your Social Media Marketing services.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+                {t('smmCtaButton')}
+              </a>
             </div>
           </div>
         </div>

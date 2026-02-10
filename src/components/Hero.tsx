@@ -26,13 +26,13 @@ const Hero = () => {
           
           <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
             <span className="block opacity-0 animate-[fade-in_1s_ease-out_0.2s_forwards]">
-              We Create
+              {t('heroLine1')}
             </span>
             <span className="block text-7xl md:text-9xl opacity-0 animate-[fade-in_1s_ease-out_0.6s_forwards] my-4">
               <AnimatedText />
             </span>
             <span className="block opacity-0 animate-[fade-in_1s_ease-out_1s_forwards]">
-              That Matter
+              {t('heroLine3')}
             </span>
           </h1>
           
@@ -45,13 +45,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 animate-[fade-in_1s_ease-out_2.2s_forwards]">
-            <button className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-500 transform hover:scale-110 flex items-center text-lg">
+            <a href="mailto:pranjali@cosmocommspr.com?subject=PR Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'd like to discuss how your PR services can help my brand.%0D%0A%0D%0AThank you!" className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-500 transform hover:scale-110 flex items-center text-lg">
               {t('letsTalk')}
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-            <button className="group border-2 border-matcha-600 text-matcha-700 px-8 py-4 rounded-full font-semibold hover:bg-matcha-600 hover:text-white transition-all duration-500 text-lg hover:scale-105">
+            </a>
+            <a href="#services" className="group border-2 border-matcha-600 text-matcha-700 px-8 py-4 rounded-full font-semibold hover:bg-matcha-600 hover:text-white transition-all duration-500 text-lg hover:scale-105">
               {t('ourWork')}
-            </button>
+            </a>
           </div>
           
           <div className="mt-20 flex items-center justify-center space-x-12 rtl:space-x-reverse text-gray-500 opacity-0 animate-[fade-in_1s_ease-out_2.6s_forwards]">

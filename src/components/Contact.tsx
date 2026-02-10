@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, MapPin, Globe, Send } from 'lucide-react';
+import { Mail, MapPin, Globe, Send, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Contact = () => {
@@ -30,48 +30,54 @@ const Contact = () => {
               <div className="p-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-amber-300">Based in Dubai</h3>
-              <p className="text-gray-300 text-center">Where innovation meets tradition</p>
+              <h3 className="text-xl font-bold mb-3 text-amber-300">{t('basedInDubai')}</h3>
+              <p className="text-gray-300 text-center">{t('whereInnovation')}</p>
             </div>
             
             <div className="group flex flex-col items-center bg-white/5 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 border border-stone-400/20">
               <div className="p-4 bg-gradient-to-r from-stone-500 to-stone-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-stone-300">Open to the World</h3>
-              <p className="text-gray-300 text-center">Global reach, local insight</p>
+              <h3 className="text-xl font-bold mb-3 text-stone-300">{t('openToWorld')}</h3>
+              <p className="text-gray-300 text-center">{t('globalInsight')}</p>
             </div>
             
             <div className="group flex flex-col items-center bg-white/5 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 border border-amber-600/20">
               <div className="p-4 bg-gradient-to-r from-amber-600 to-stone-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Send className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-amber-200">Start Your Story</h3>
-              <p className="text-gray-300 text-center">Let's create what's next</p>
+              <h3 className="text-xl font-bold mb-3 text-amber-200">{t('startYourStory')}</h3>
+              <p className="text-gray-300 text-center">{t('letsCreateNext')}</p>
             </div>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 mb-12 border border-amber-500/30 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-stone-500/5"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-6 text-amber-300">Start Your Story With Us</h3>
-              <a 
-                href="mailto:pranjali@cosmocommspr.com" 
-                className="group text-2xl text-amber-400 hover:text-amber-300 transition-all duration-300 font-semibold inline-flex items-center"
-              >
-                pranjali@cosmocommspr.com
-                <Mail className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              <h3 className="text-3xl font-bold mb-6 text-amber-300">{t('startYourStoryWithUs')}</h3>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+                <a 
+                  href="mailto:pranjali@cosmocommspr.com" 
+                  className="group text-xl md:text-2xl text-amber-400 hover:text-amber-300 transition-all duration-300 font-semibold inline-flex items-center"
+                >
+                  <Mail className="mr-3 rtl:mr-0 rtl:ml-3 w-6 h-6" />
+                  pranjali@cosmocommspr.com
+                </a>
+                <a 
+                  href="tel:+971543338611" 
+                  className="group text-xl md:text-2xl text-amber-400 hover:text-amber-300 transition-all duration-300 font-semibold inline-flex items-center"
+                >
+                  <Phone className="mr-3 rtl:mr-0 rtl:ml-3 w-6 h-6" />
+                  +971 54 333 8611
+                </a>
+              </div>
             </div>
           </div>
           
-          <button className="group bg-gradient-to-r from-amber-500 via-amber-600 to-stone-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 relative overflow-hidden">
-            <span className="relative z-10 flex items-center">
+          <a href="mailto:pranjali@cosmocommspr.com?subject=Let's Get Started&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in working together. Let's discuss how you can help my brand.%0D%0A%0D%0AThank you!" className="group bg-gradient-to-r from-amber-500 via-amber-600 to-stone-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 relative overflow-hidden inline-flex items-center">
               {t('getStarted')}
               <Send className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-stone-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          </button>
+          </a>
         </div>
       </div>
     </section>

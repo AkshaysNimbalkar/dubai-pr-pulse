@@ -1,4 +1,4 @@
-import { Mail, MapPin, Instagram } from 'lucide-react';
+import { Mail, MapPin, Phone, Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 
@@ -44,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/startup-pr-kit" className="hover:text-amber-400 transition-colors duration-300 block">
-                  Startup PR Kit
+                  PR Playbook
                 </Link>
               </li>
               <li>
@@ -61,16 +61,22 @@ const Footer = () => {
           </div>
           
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-stone-300 mb-6">Contact Info</h3>
+            <h3 className="text-2xl font-bold text-stone-300 mb-6">{t('contactInfo')}</h3>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center group hover:text-amber-400 transition-colors duration-300">
-                <div className="p-2 bg-gradient-to-r from-amber-500 to-amber-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-2 bg-gradient-to-r from-amber-500 to-amber-600 rounded-lg mr-4 rtl:mr-0 rtl:ml-4 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <a href="mailto:pranjali@cosmocommspr.com" className="text-lg hover:text-amber-300 transition-colors">pranjali@cosmocommspr.com</a>
               </div>
               <div className="flex items-center group hover:text-amber-400 transition-colors duration-300">
-                <div className="p-2 bg-gradient-to-r from-stone-500 to-stone-600 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-2 bg-gradient-to-r from-matcha-500 to-matcha-600 rounded-lg mr-4 rtl:mr-0 rtl:ml-4 group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <a href="tel:+971543338611" className="text-lg hover:text-amber-300 transition-colors">+971 54 333 8611</a>
+              </div>
+              <div className="flex items-center group hover:text-amber-400 transition-colors duration-300">
+                <div className="p-2 bg-gradient-to-r from-stone-500 to-stone-600 rounded-lg mr-4 rtl:mr-0 rtl:ml-4 group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-lg">Dubai, UAE</span>
@@ -91,6 +97,17 @@ const Footer = () => {
                   <Instagram className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-lg">@cosmocomms_pr</span>
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/cosmocommspr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center group hover:text-blue-400 transition-colors duration-300 text-gray-300"
+              >
+                <div className="p-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <Linkedin className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-lg">CosmoComms PR</span>
               </a>
             </div>
           </div>

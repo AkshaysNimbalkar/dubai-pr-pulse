@@ -11,23 +11,23 @@ const InfluencerMarketing = () => {
   const features = [
     {
       icon: Users,
-      title: "Creator Matching",
-      description: "From nano to mega influencers, we connect you with authentic voices that resonate with your target audience."
+      title: t('imCreatorMatching'),
+      description: t('imCreatorMatchingDesc')
     },
     {
       icon: TrendingUp,
-      title: "Campaign Strategy",
-      description: "Data-driven influencer strategies that maximize reach, engagement, and conversion rates across all platforms."
+      title: t('imCampaignStrategy'),
+      description: t('imCampaignStrategyDesc')
     },
     {
       icon: Heart,
-      title: "Relationship Management",
-      description: "Long-term creator partnerships that build authentic brand advocacy and sustainable growth."
+      title: t('imRelationshipMgmt'),
+      description: t('imRelationshipMgmtDesc')
     },
     {
       icon: Zap,
-      title: "Performance Tracking",
-      description: "Real-time analytics and ROI measurement to ensure every collaboration delivers measurable results."
+      title: t('imPerformanceTracking'),
+      description: t('imPerformanceTrackingDesc')
     }
   ];
 
@@ -44,7 +44,7 @@ const InfluencerMarketing = () => {
           <div className="max-w-4xl mx-auto">
             <Link to="/services" className="inline-flex items-center text-pink-600 hover:text-pink-700 mb-8 group">
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Services
+              {t('backToServices')}
             </Link>
 
             <div className="text-center mb-16">
@@ -53,11 +53,11 @@ const InfluencerMarketing = () => {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-pink-600 to-matcha-600 bg-clip-text text-transparent">
-                  Influencer Marketing
+                  {t('influencerMarketing')}
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                In the age of authentic connections, influencer marketing isn't just about follower counts—it's about finding voices that truly resonate. We match your brand with creators who don't just promote; they advocate, inspire, and convert their communities into your customers.
+                {t('imPageDesc')}
               </p>
             </div>
 
@@ -74,13 +74,13 @@ const InfluencerMarketing = () => {
             </div>
 
             <div className="bg-gradient-to-r from-pink-100 to-matcha-100 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Amplify Your Voice?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('imCtaTitle')}</h3>
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                From micro-moments to viral campaigns, we create influencer partnerships that drive real business results.
+                {t('imCtaDesc')}
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
-                Find Your Voices
-              </Link>
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Influencer Marketing Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in your Influencer Marketing services.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+                {t('imCtaButton')}
+              </a>
             </div>
           </div>
         </div>

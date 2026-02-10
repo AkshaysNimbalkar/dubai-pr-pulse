@@ -51,10 +51,10 @@ const About = () => {
                   <div className="p-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl mr-4">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Strategic Focus</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{t('strategicFocus')}</h3>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Every campaign is built on deep strategic thinking and cultural insight.
+                  {t('strategicFocusText')}
                 </p>
               </div>
 
@@ -63,10 +63,10 @@ const About = () => {
                   <div className="p-4 bg-gradient-to-r from-stone-500 to-stone-600 rounded-2xl mr-4">
                     <Lightbulb className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Creative Innovation</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{t('creativeInnovation')}</h3>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  We blend digital innovation with unapologetic creativity to break through.
+                  {t('creativeInnovationText')}
                 </p>
               </div>
 
@@ -75,10 +75,10 @@ const About = () => {
                   <div className="p-4 bg-gradient-to-r from-amber-600 to-stone-500 rounded-2xl mr-4">
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Cultural Intuition</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{t('culturalIntuition')}</h3>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Dubai roots give us unique cultural perspective for global communications.
+                  {t('culturalIntuitionText')}
                 </p>
               </div>
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, MapPin, Globe } from 'lucide-react';
+import { Mail, MapPin, Globe, Phone } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -28,13 +28,21 @@ const Contact = () => {
               {t('contactDescription')}
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform hover:scale-105">
                 <div className="p-3 bg-gradient-to-r from-matcha-500 to-matcha-600 rounded-full w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{t('emailUs')}</h3>
-                <p className="text-matcha-600 font-medium">pranjali@cosmocommspr.com</p>
+                <a href="mailto:pranjali@cosmocommspr.com" className="text-matcha-600 font-medium hover:text-matcha-700 transition-colors">pranjali@cosmocommspr.com</a>
+              </div>
+
+              <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+                <div className="p-3 bg-gradient-to-r from-matcha-600 to-amber-500 rounded-full w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('callUs')}</h3>
+                <a href="tel:+971543338611" className="text-matcha-600 font-medium hover:text-matcha-700 transition-colors">+971 54 333 8611</a>
               </div>
               
               <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform hover:scale-105">
@@ -54,10 +62,10 @@ const Contact = () => {
               </div>
             </div>
             
-            <button className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-12 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-500 transform hover:scale-110 text-xl">
+            <a href="mailto:pranjali@cosmocommspr.com?subject=Let's Get Started&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in working together. Let's discuss how you can help my brand.%0D%0A%0D%0AThank you!" className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-12 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-500 transform hover:scale-110 text-xl inline-flex items-center">
               {t('getStarted')}
               <span className="ml-3 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>

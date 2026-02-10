@@ -11,23 +11,23 @@ const LaunchCampaigns = () => {
   const features = [
     {
       icon: Zap,
-      title: "Pre-Launch Strategy",
-      description: "Build anticipation and buzz before your launch with strategic teasers, influencer partnerships, and media outreach."
+      title: t('lcPreLaunch'),
+      description: t('lcPreLaunchDesc')
     },
     {
       icon: Calendar,
-      title: "Launch Orchestration",
-      description: "Perfectly timed, multi-channel campaigns that maximize impact and ensure your launch makes headlines."
+      title: t('lcOrchestration'),
+      description: t('lcOrchestrationDesc')
     },
     {
       icon: Target,
-      title: "Audience Targeting",
-      description: "Precision targeting that reaches your ideal customers at exactly the right moment with the perfect message."
+      title: t('lcAudienceTargeting'),
+      description: t('lcAudienceTargetingDesc')
     },
     {
       icon: TrendingUp,
-      title: "Post-Launch Momentum",
-      description: "Sustain the excitement with ongoing campaigns that turn initial buzz into lasting brand loyalty and growth."
+      title: t('lcPostLaunch'),
+      description: t('lcPostLaunchDesc')
     }
   ];
 
@@ -44,7 +44,7 @@ const LaunchCampaigns = () => {
           <div className="max-w-4xl mx-auto">
             <Link to="/services" className="inline-flex items-center text-amber-600 hover:text-amber-700 mb-8 group">
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Services
+              {t('backToServices')}
             </Link>
 
             <div className="text-center mb-16">
@@ -53,11 +53,11 @@ const LaunchCampaigns = () => {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-amber-600 to-pink-600 bg-clip-text text-transparent">
-                  Launch Campaigns
+                  {t('launchCampaigns')}
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                First impressions are everything. Whether you're launching a product, service, or entire brand, we create bold, strategic campaigns that don't just announce—they disrupt, captivate, and convert. We turn launches into movements that people can't ignore.
+                {t('lcPageDesc')}
               </p>
             </div>
 
@@ -74,13 +74,13 @@ const LaunchCampaigns = () => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-100 to-pink-100 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Launch Into Success?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('lcCtaTitle')}</h3>
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                From stealth mode to worldwide attention—we make sure your launch creates the impact it deserves.
+                {t('lcCtaDesc')}
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
-                Launch with Impact
-              </Link>
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Launch Campaign Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in your Launch Campaign services.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+                {t('lcCtaButton')}
+              </a>
             </div>
           </div>
         </div>

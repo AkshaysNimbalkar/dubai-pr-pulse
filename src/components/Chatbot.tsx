@@ -14,18 +14,21 @@ interface Message {
 }
 
 const Chatbot = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      content: "Hi! I'm Ask Comms, your CosmoComms PR assistant. I'm here to help you with questions about our services, expertise, and how we can help your brand shine. What would you like to know?",
-      sender: 'bot',
-      timestamp: new Date()
-    }
-  ]);
+  const { t, language } = useLanguage();
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+
+  // Initialize messages with translated greeting when language changes
+  useEffect(() => {
+    setMessages([{
+      id: '1',
+      content: t('chatbotGreeting'),
+      sender: 'bot',
+      timestamp: new Date()
+    }]);
+  }, [language]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -134,7 +137,7 @@ const Chatbot = () => {
     }
     
     if (message.includes('contact') || message.includes('reach out') || message.includes('get in touch')) {
-      return "You can reach us at hello@cosmocommspr.com or visit our Contact page to start a conversation about your brand's potential. We'd love to hear your story!";
+      return "You can reach us at pranjali@cosmocommspr.com, call us at +971 54 333 8611, or visit our Contact page to start a conversation about your brand's potential. We'd love to hear your story!";
     }
     
     if (message.includes('price') || message.includes('cost') || message.includes('budget')) {
@@ -214,7 +217,7 @@ const Chatbot = () => {
         <button className="fixed bottom-6 right-6 bg-gradient-to-r from-matcha-500 to-amber-500 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 z-50 group">
           <MessageCircle className="w-6 h-6" />
           <span className="absolute -top-2 -left-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-            Ask Comms
+            {t('askComms')}
           </span>
         </button>
       </DialogTrigger>
@@ -222,7 +225,7 @@ const Chatbot = () => {
         <DialogHeader className="p-6 pb-4 bg-gradient-to-r from-matcha-500 to-amber-500 text-white">
           <DialogTitle className="flex items-center gap-3">
             <RobotAvatar />
-            Ask Comms - Your PR Assistant
+            {t('chatbotTitle')}
           </DialogTitle>
         </DialogHeader>
         
@@ -260,7 +263,7 @@ const Chatbot = () => {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask about our services..."
+              placeholder={t('chatbotPlaceholder')}
               className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
             />
             <Button

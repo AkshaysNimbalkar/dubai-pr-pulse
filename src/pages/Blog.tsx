@@ -73,18 +73,18 @@ const Blog = () => {
             <div className="text-center mb-20">
               <div className="inline-flex items-center bg-white/60 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
                 <BookOpen className="w-5 h-5 text-matcha-600 mr-3" />
-                <span className="text-matcha-700 font-semibold">Industry Knowledge & Insights</span>
+                <span className="text-matcha-700 font-semibold">{t('industryInsights')}</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tight">
-                PR Insights &{' '}
+                {t('prInsights')}{' '}
                 <span className="bg-gradient-to-r from-matcha-600 via-amber-600 to-pink-600 bg-clip-text text-transparent">
-                  Industry Trends
+                  {t('industryTrends')}
                 </span>
               </h1>
               
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Stay ahead of the curve with insights from our PR experts. Latest trends, strategies, and insider tips across industries.
+                {t('blogDescription')}
               </p>
             </div>
             
@@ -120,7 +120,7 @@ const Blog = () => {
                     </div>
                     
                     <button className="flex items-center text-matcha-600 group-hover:text-matcha-700 font-semibold">
-                      Read More 
+                      {t('readMore')} 
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </button>
                   </div>
@@ -130,12 +130,12 @@ const Blog = () => {
             
             <div className="mt-20 text-center">
               <p className="text-xl text-gray-600 mb-6">
-                Want to contribute or suggest a topic?
+                {t('wantToContribute')}
               </p>
-              <button className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-10 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-500 transform hover:scale-110 text-lg">
-                Get in Touch
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Blog Contribution&body=Hi CosmoComms Team,%0D%0A%0D%0AI'd like to contribute or suggest a blog topic.%0D%0A%0D%0AThank you!" className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-10 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-500 transform hover:scale-110 text-lg inline-block">
+                {t('getInTouch')}
                 <span className="ml-3 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

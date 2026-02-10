@@ -1,7 +1,10 @@
 import React from 'react';
 import { Instagram } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const InstagramFeed = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-gradient-to-br from-white via-pink-50/20 to-matcha-50/20 relative overflow-hidden">
       {/* Background Elements */}
@@ -14,18 +17,18 @@ const InstagramFeed = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center bg-gradient-to-r from-pink-100 to-amber-100 rounded-full px-6 py-3 mb-6">
             <Instagram className="w-5 h-5 text-pink-600 mr-3" />
-            <span className="text-pink-700 font-semibold">Follow Our Journey</span>
+            <span className="text-pink-700 font-semibold">{t('followOurJourney')}</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            Behind the{' '}
+            {t('behindTheScenes')}{' '}
             <span className="bg-gradient-to-r from-pink-600 via-matcha-600 to-amber-600 bg-clip-text text-transparent">
-              Scenes
+              {t('scenes')}
             </span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Get PR tips, industry insights, and a peek into our creative process on Instagram
+            {t('instagramDescription')}
           </p>
 
           <a 

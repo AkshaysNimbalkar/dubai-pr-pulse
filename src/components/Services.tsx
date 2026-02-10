@@ -16,8 +16,8 @@ const Services = () => {
   const services = [
     {
       icon: Globe,
-      title: "Public Relations",
-      description: "Press coverage, media relations, and thought leadership that puts you where the world is watching.",
+      title: t('publicRelations'),
+      description: t('publicRelationsDesc'),
       gradient: "from-matcha-500 to-matcha-600",
       link: "/services/public-relations",
       image: publicRelationsImg,
@@ -25,8 +25,8 @@ const Services = () => {
     },
     {
       icon: Smartphone,
-      title: "Social Media Marketing",
-      description: "Scroll-stopping content, strategy, and management that builds communities and drives engagement.",
+      title: t('socialMediaMarketing'),
+      description: t('socialMediaMarketingDesc'),
       gradient: "from-amber-500 to-amber-600",
       link: "/services/social-media-marketing",
       image: socialMediaImg,
@@ -34,8 +34,8 @@ const Services = () => {
     },
     {
       icon: Star,
-      title: "Influencer Marketing",
-      description: "From nano to mega, we connect your brand with credible creators who convert.",
+      title: t('influencerMarketing'),
+      description: t('influencerMarketingDesc'),
       gradient: "from-pink-500 to-pink-600",
       link: "/services/influencer-marketing",
       image: influencerMarketingImg,
@@ -43,8 +43,8 @@ const Services = () => {
     },
     {
       icon: Target,
-      title: "Brand Development",
-      description: "Messaging, identity, and storytelling that captures the essence of your brand and fuels growth.",
+      title: t('brandDevelopment'),
+      description: t('brandDevelopmentDesc'),
       gradient: "from-matcha-600 to-amber-600",
       link: "/services/brand-development",
       image: brandDevelopmentImg,
@@ -52,8 +52,8 @@ const Services = () => {
     },
     {
       icon: Rocket,
-      title: "Launch Campaigns",
-      description: "Whether it's a product, brand, or idea—we design bold launches that make headlines.",
+      title: t('launchCampaigns'),
+      description: t('launchCampaignsDesc'),
       gradient: "from-amber-600 to-pink-600",
       link: "/services/launch-campaigns",
       image: launchCampaignsImg,
@@ -61,8 +61,8 @@ const Services = () => {
     },
     {
       icon: Brain,
-      title: "Strategic Consulting",
-      description: "Big-picture guidance for brands ready to evolve, pivot, or grow fast.",
+      title: t('strategicConsulting'),
+      description: t('strategicConsultingDesc'),
       gradient: "from-pink-600 to-matcha-600",
       link: "/services/strategic-consulting",
       image: strategicConsultingImg,
@@ -71,7 +71,7 @@ const Services = () => {
   ];
 
   const industries = [
-    "Beauty", "Fashion", "Real Estate", "Tech", "Wellness", "Hospitality", "Retail"
+    t('beauty'), t('fashion'), t('realEstate'), t('tech'), t('wellness'), t('hospitality'), t('retail')
   ];
 
   return (
@@ -86,10 +86,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tight leading-tight">
-              PR. But Make It{' '}
-              <span className="bg-gradient-to-r from-amber-600 to-stone-600 bg-clip-text text-transparent">
-                Future-Ready.
-              </span>
+              {t('servicesTitle')}
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {t('servicesDescription')}
@@ -105,7 +102,7 @@ const Services = () => {
           <div className="bg-white rounded-3xl p-12 text-center shadow-xl border border-amber-100/50 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-50/30 to-stone-50/30"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8">Industries We Serve</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">{t('industriesWeServe')}</h3>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {industries.map((industry, index) => (
                   <span 
@@ -117,7 +114,7 @@ const Services = () => {
                 ))}
               </div>
               <p className="text-2xl text-gray-600 font-light">
-                No limits. Just possibilities.
+                {t('noLimits')}
               </p>
             </div>
           </div>

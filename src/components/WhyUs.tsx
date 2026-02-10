@@ -7,11 +7,11 @@ const WhyUs = () => {
   const { t } = useLanguage();
   
   const reasons = [
-    "Dubai-based, globally minded",
-    "Industry-agnostic & impact-driven",
-    "Rooted in culture, powered by innovation",
-    "Led by next-gen PR thinkers",
-    "Agile, bold, and always ahead of the curve"
+    t('reason1'),
+    t('reason2'),
+    t('reason3'),
+    t('reason4'),
+    t('reason5')
   ];
 
   return (

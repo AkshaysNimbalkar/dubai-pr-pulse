@@ -1,27 +1,16 @@
-import { useState } from 'react';
-import Header from './Header';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Rocket, Check, X, Star, Clock, Shield, Zap, Award, Users, TrendingUp, Target, MessageSquare, DollarSign, CheckCircle2 } from 'lucide-react';
+import { Rocket, Check } from 'lucide-react';
 
 const StartupPRKit = () => {
-  const [selectedPlan, setSelectedPlan] = useState('guided');
   const { language, t, tr } = useLanguage();
 
   const hero = tr('startup.hero') || {};
-  const problems = tr('startup.problems') || [];
-  const solution = tr('startup.solution') || {};
-  const stats = tr('startup.stats') || [];
-  const modules = tr('startup.modules') || [];
   const pricingPlans = tr('startup.pricingPlans') || [];
-  const testimonials = tr('startup.testimonials') || [];
-  const bonuses = tr('startup.bonuses') || [];
   const faqs = tr('startup.faqs') || [];
   const ctas = tr('startup.ctas') || {};
 
   return (
-    <div className="min-h-screen">
-      <Header />
-
+    <div>
       {/* Hero Section */}
       <section className="pt-32 pb-24 bg-gradient-to-br from-pink-50 via-white to-matcha-50 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -32,126 +21,50 @@ const StartupPRKit = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center bg-gradient-to-r from-pink-100 to-matcha-100 rounded-full px-6 py-3 mb-6">
               <Rocket className="w-5 h-5 text-pink-600 mr-3" />
-              <span className="text-pink-700 font-semibold">{hero.label || 'Startup PR Kit'}</span>
+              <span className="text-pink-700 font-semibold">{hero.label || 'The PR Playbook'}</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
               {hero.h1
                 ? hero.h1.split('\n').map((line: string, i: number) => (
                     <span key={i} className="block">{line}</span>
                   ))
                 : (
                   <>
-                    Launch Loud. Get Found.<br />Build Trust.
+                    Your Brand Deserves<br />the Spotlight.
                   </>
                 )}
             </h1>
-            <p className="text-2xl text-gray-600 mb-4">{hero.subtitle || '(Even on a Ramen Budget)'}</p>
+            <p className="text-2xl text-gray-600 mb-4">{hero.subtitle || 'Strategic PR Packages for Every Stage of Growth'}</p>
             <div className="max-w-3xl mx-auto mb-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">{hero.introHeading || 'New to PR? No problem.'}</h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                {hero.introText || "We help startups go from invisible to inevitable—building media visibility, brand credibility, and influencer buzz."}
-              </p>
-            </div>
-            <div className="bg-gradient-to-r from-pink-500 via-matcha-500 to-amber-500 text-white p-8 rounded-3xl shadow-2xl max-w-3xl mx-auto mb-8">
-              <p className="text-lg font-medium leading-relaxed italic">
-                {hero.founderMessage || "Built by a PR girl who's been there—launching with nothing but WiFi, caffeine, and pure determination."}
+                {hero.introText || "Whether you're launching, scaling, or dominating your market—we have a PR package built for you. No cookie-cutter campaigns. Just results-driven strategy."}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#pricing" className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                {hero.ctaPrimary || 'GET INSTANT ACCESS'}
+              <a href="#packages" className="group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
+                {hero.ctaPrimary || 'VIEW OUR PACKAGES'}
                 <span className="ml-3 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
               </a>
-              <a href="#pricing" className="bg-white text-gray-900 border-2 border-gray-300 px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl transition-all duration-500 transform hover:scale-110">
-                {hero.ctaSecondary || 'SEE PRICING'}
+              <a href="mailto:pranjali@cosmocommspr.com?subject=PR Enquiry&body=Hi Team,%0D%0A%0D%0AI'd like to learn more about your PR packages.%0D%0A%0D%0AThank you!" className="bg-white text-gray-900 border-2 border-gray-300 px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl transition-all duration-500 transform hover:scale-110">
+                {hero.ctaSecondary || 'TALK TO US'}
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Statement */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-12">
-              The Startup PR Struggle Is Real
-            </h2>
-            <p className="text-2xl text-center text-gray-700 mb-12">You know the feeling:</p>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {problems.map((problem: string, idx: number) => (
-                <div key={idx} className="flex items-start bg-red-50 p-6 rounded-2xl border-2 border-red-100">
-                  <X className="w-6 h-6 text-red-500 mr-4 flex-shrink-0 mt-1" />
-                  <p className="text-lg text-gray-800">{problem}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center bg-gradient-to-r from-matcha-500 to-pink-500 text-white p-8 rounded-3xl">
-               <p className="text-2xl font-bold">What if you could get media coverage without the agency price tag?</p>
-             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Overview */}
-      <section className="py-24 bg-gradient-to-br from-matcha-50 to-pink-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">{solution.title || 'Introducing the Startup PR Kit'}</h2>
-            <p className="text-3xl font-semibold text-matcha-600 mb-8">{solution.subtitle || 'Your Complete PR System in a Box'}</p>
-            <p className="text-xl text-gray-700 mb-12">{solution.description || 'No fluff. No theory. Just battle-tested templates, scripts, and strategies that get results.'}</p>
-
-            <div className="grid md:grid-cols-4 gap-6">
-              {stats.map((s: any, i: number) => (
-                <div key={i} className="bg-white p-6 rounded-2xl shadow-lg">
-                  <div className="text-4xl font-bold text-matcha-600 mb-2">{s.value}</div>
-                  <p className="text-gray-700 font-semibold">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Included */}
-      <section className="py-24 bg-white">
+      {/* Packages Section */}
+      <section id="packages" className="py-24 bg-gradient-to-br from-gray-900 to-stone-900 text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-6">Everything You Need to Get Featured</h2>
-
-            <div className="grid gap-8 mt-16">
-              {modules.map((module, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-white to-matcha-50/30 p-8 rounded-3xl border-2 border-matcha-200 hover:shadow-2xl transition-all duration-500">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">{module.title}</h3>
-                  <p className="text-xl text-matcha-600 font-semibold mb-6">{module.subtitle}</p>
-                  <ul className="space-y-3">
-                    {module.features.map((feature, fidx) => (
-                      <li key={fidx} className="flex items-start">
-                        <CheckCircle2 className="w-6 h-6 text-matcha-600 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 text-lg">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-gradient-to-br from-gray-900 to-stone-900 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16">{tr('startup.solution.title') || 'Choose Your PR Journey'}</h2>
+            <h2 className="text-5xl font-bold text-center mb-6">{tr('startup.solution.title') || 'The CosmoComms PR Playbook'}</h2>
+            <p className="text-xl text-center text-gray-300 mb-16">{tr('startup.solution.subtitle') || 'Tailored packages to match your brand\'s stage and ambitions'}</p>
 
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan) => (
                 <div
                   key={plan.id}
-                  className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border-2 transition-all duration-500 hover:scale-105 ${
+                  className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border-2 transition-all duration-500 hover:scale-105 flex flex-col ${
                     plan.popular ? 'border-amber-500 shadow-2xl shadow-amber-500/50' : 'border-white/20'
                   }`}
                 >
@@ -163,11 +76,10 @@ const StartupPRKit = () => {
 
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-amber-400 mb-2">{plan.price}</div>
-                    <p className="text-gray-400">{plan.period}</p>
+                    <p className="text-amber-400 font-semibold text-lg mb-2">{plan.subtitle}</p>
                   </div>
                   <p className="text-center text-gray-300 mb-6">{plan.description}</p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-8 flex-grow">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
                         <Check className="w-5 h-5 text-matcha-400 mr-3 flex-shrink-0 mt-0.5" />
@@ -176,80 +88,19 @@ const StartupPRKit = () => {
                     ))}
                   </ul>
                   <div className="bg-white/10 rounded-2xl p-4 mb-6">
-                    <p className="text-sm text-gray-300 mb-1">Perfect for:</p>
+                    <p className="text-sm text-gray-300 mb-1">Best for:</p>
                     <p className="text-sm font-semibold">{plan.ideal}</p>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-500">
+                  <a
+                    href={`mailto:pranjali@cosmocommspr.com?subject=Interest in ${plan.name} Package&body=Hi Team,%0D%0A%0D%0AI am interested in the ${plan.name} package (${plan.subtitle}).%0D%0A%0D%0ACould we schedule a brief call to discuss how this package can help my brand?%0D%0A%0D%0AThank you!%0D%0A%0D%0ABest regards`}
+                    className="block w-full bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-500 text-center"
+                  >
                     {plan.cta} →
-                  </button>
+                  </a>
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-400 mt-8">All prices in AED. VAT included where applicable.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">{tr('startup.testimonials') ? 'Founders Who Made Headlines' : 'Founders Who Made Headlines'}</h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-matcha-50 to-pink-50 p-8 rounded-3xl border-2 border-matcha-200">
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-amber-500 fill-amber-500" />
-                    ))}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">"{testimonial.quote}"</h3>
-                  <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
-                  <div className="border-t border-gray-300 pt-4">
-                    <p className="font-bold text-gray-900">{testimonial.author}</p>
-                    <p className="text-gray-600">{testimonial.role}</p>
-                    <p className="text-sm text-matcha-600 mt-2">
-                      {testimonial.featured ? `Featured in: ${testimonial.featured}` : testimonial.raised}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bonuses */}
-      <section className="py-24 bg-gradient-to-br from-pink-50 to-matcha-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-6">{tr('startup.bonuses') ? 'Order Today & Get These FREE Bonuses' : 'Order Today & Get These FREE Bonuses'}</h2>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {bonuses.map((bonus, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-3xl border-2 border-matcha-200 hover:shadow-2xl transition-all duration-500">
-                  <div className="bg-gradient-to-r from-matcha-500 to-pink-500 text-white px-4 py-2 rounded-full inline-block mb-4 font-bold">
-                    Bonus #{idx + 1}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{bonus.title}</h3>
-                  <p className="text-xl text-matcha-600 font-semibold mb-4">Value: {bonus.value}</p>
-                  <ul className="space-y-2">
-                    {bonus.features.map((feature, fidx) => (
-                      <li key={fidx} className="flex items-start">
-                        <Check className="w-5 h-5 text-matcha-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-gradient-to-r from-amber-500 to-pink-500 text-white p-8 rounded-3xl text-center">
-              <p className="text-3xl font-bold">{t('getStarted') || 'Total Bonus Value: AED 1,191'}</p>
-              <p className="text-xl mt-2">Yours FREE with any package</p>
-            </div>
+            <p className="text-center text-gray-400 mt-8">Contact us to discuss custom packages tailored to your specific needs.</p>
           </div>
         </div>
       </section>
@@ -258,7 +109,7 @@ const StartupPRKit = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">{tr('startup.faqs') ? "Questions? We've Got Answers" : "Questions? We've Got Answers"}</h2>
+            <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">Questions? We've Got Answers</h2>
 
             <div className="space-y-6">
               {faqs.map((faq, idx) => (
@@ -272,93 +123,25 @@ const StartupPRKit = () => {
         </div>
       </section>
 
-      {/* Urgency */}
-      <section className="py-24 bg-gradient-to-br from-red-500 via-pink-500 to-amber-500 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl font-bold mb-6">Limited Time Launch Offer</h2>
-            <p className="text-3xl font-bold mb-8">Save AED 500 on Any Package</p>
-            <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 mb-8">
-              <p className="text-2xl font-bold mb-4">Use code LAUNCH500 at checkout</p>
-              <div className="flex justify-center gap-4 text-4xl font-bold">
-                <div className="bg-white/30 px-6 py-4 rounded-2xl">2 <span className="text-sm">DAYS</span></div>
-                <div className="bg-white/30 px-6 py-4 rounded-2xl">14 <span className="text-sm">HRS</span></div>
-                <div className="bg-white/30 px-6 py-4 rounded-2xl">32 <span className="text-sm">MIN</span></div>
-              </div>
-            </div>
-            <p className="text-xl mb-2">Plus: Next 20 buyers get a FREE 30-minute PR audit call</p>
-            <p className="text-lg">(Value: AED 750) • Spots remaining: 12</p>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-stone-900 text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-6xl font-bold mb-8">{ctas.finalCta || 'Ready to Make Headlines?'}</h2>
-            <p className="text-2xl mb-4">{t('contactDescription') || 'Stop watching your competitors get all the coverage.'}</p>
-            <p className="text-2xl mb-12">{t('contactTitle') || 'Your story deserves to be heard.'}</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-8">{ctas.finalCta || 'Ready to Make Headlines?'}</h2>
+            <p className="text-2xl mb-4">Stop watching your competitors get all the coverage.</p>
+            <p className="text-2xl mb-12">Your story deserves to be heard.</p>
 
-            <a href="#pricing" className="inline-block group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-16 py-6 rounded-full font-bold text-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 mb-8">
-              {ctas.finalCta || 'GET THE STARTUP PR KIT NOW'}
+            <a href="#packages" className="inline-block group bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-16 py-6 rounded-full font-bold text-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 mb-8">
+              {ctas.exploreCta || 'EXPLORE PACKAGES'}
               <span className="ml-3 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
             </a>
             <div className="mt-12 pt-12 border-t border-white/20">
               <p className="text-xl mb-4">Still on the fence?</p>
-              <a href={`mailto:${ctas.email || 'pranjali@cosmocommspr.com'}`} className="text-amber-400 hover:text-amber-300 font-semibold text-lg underline">
-                {ctas.bookCall || 'Book a free 15-minute "Is This Right for Me?" call'}
+              <a href={`mailto:${ctas.email || 'pranjali@cosmocommspr.com'}?subject=PR Consultation Request&body=Hi Team,%0D%0A%0D%0AI'd like to book a quick call to discuss my PR needs.%0D%0A%0D%0AThank you!`} className="text-amber-400 hover:text-amber-300 font-semibold text-lg underline">
+                {ctas.bookCall || 'Book a free 15-minute consultation call'}
               </a>
               <p className="text-gray-400 mt-2">No sales pressure. Just honest advice about your PR needs.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Footer */}
-      <section className="py-12 bg-white border-t-2 border-matcha-200">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-6 text-center mb-8">
-              <div className="flex flex-col items-center">
-                <Zap className="w-8 h-8 text-matcha-600 mb-2" />
-                <p className="font-semibold text-gray-900">Instant Access</p>
-                <p className="text-sm text-gray-600">Start in 5 minutes</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Award className="w-8 h-8 text-amber-600 mb-2" />
-                <p className="font-semibold text-gray-900">Lifetime Updates</p>
-                <p className="text-sm text-gray-600">Kit grows with you</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Shield className="w-8 h-8 text-pink-600 mb-2" />
-                <p className="font-semibold text-gray-900">Secure Checkout</p>
-                <p className="text-sm text-gray-600">256-bit SSL encryption</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <CheckCircle2 className="w-8 h-8 text-matcha-600 mb-2" />
-                <p className="font-semibold text-gray-900">30-Day Guarantee</p>
-                <p className="text-sm text-gray-600">Risk-free investment</p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <p className="text-gray-700 mb-2">Questions? WhatsApp us: <a href="https://wa.me/971542484775" className="text-matcha-600 font-semibold hover:underline">+971 54 248 4775</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* P.S. Section */}
-      <section className="py-16 bg-gradient-to-r from-matcha-500 to-pink-500 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl font-semibold mb-6">
-              P.S. — Every day you wait, your competitor gets another headline. The journalists on our media list won't wait for you to be ready. They're writing stories about someone else right now. Don't let it be your competition.
-            </p>
-            <a href="#pricing" className="inline-block bg-white text-gray-900 px-12 py-4 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-              {ctas.claimCta || 'Claim Your Startup PR Kit →'}
-            </a>
           </div>
         </div>
       </section>

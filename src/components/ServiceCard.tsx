@@ -1,6 +1,7 @@
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -13,6 +14,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, gradient, link, image, delay }: ServiceCardProps) => {
+  const { t } = useLanguage();
   return (
     <Link 
       to={link}
@@ -41,7 +43,7 @@ const ServiceCard = ({ icon: Icon, title, description, gradient, link, image, de
           {description}
         </p>
         <div className="flex items-center text-amber-600 group-hover:text-amber-700 font-semibold">
-          Learn More 
+          {t('learnMore')} 
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
         </div>
       </div>

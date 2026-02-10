@@ -11,23 +11,23 @@ const StrategicConsulting = () => {
   const features = [
     {
       icon: Compass,
-      title: "Strategic Direction",
-      description: "Clear roadmaps and actionable strategies that align your communications with your business objectives and market opportunities."
+      title: t('scDirection'),
+      description: t('scDirectionDesc')
     },
     {
       icon: ChartBar,
-      title: "Market Analysis",
-      description: "Deep market insights and competitive intelligence that inform smarter decisions and reveal untapped opportunities."
+      title: t('scMarketAnalysis'),
+      description: t('scMarketAnalysisDesc')
     },
     {
       icon: Users,
-      title: "Stakeholder Mapping",
-      description: "Comprehensive stakeholder analysis to identify key relationships and optimize your communication approach."
+      title: t('scStakeholder'),
+      description: t('scStakeholderDesc')
     },
     {
       icon: Lightbulb,
-      title: "Innovation Strategy",
-      description: "Forward-thinking approaches that position your brand at the forefront of industry trends and emerging markets."
+      title: t('scInnovation'),
+      description: t('scInnovationDesc')
     }
   ];
 
@@ -44,7 +44,7 @@ const StrategicConsulting = () => {
           <div className="max-w-4xl mx-auto">
             <Link to="/services" className="inline-flex items-center text-pink-600 hover:text-pink-700 mb-8 group">
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Services
+              {t('backToServices')}
             </Link>
 
             <div className="text-center mb-16">
@@ -53,11 +53,11 @@ const StrategicConsulting = () => {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-pink-600 to-matcha-600 bg-clip-text text-transparent">
-                  Strategic Consulting
+                  {t('strategicConsulting')}
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Sometimes you need to step back to move forward. Our strategic consulting provides the big-picture thinking and tactical guidance to navigate complex challenges, seize emerging opportunities, and position your brand for sustainable growth in an ever-evolving marketplace.
+                {t('scPageDesc')}
               </p>
             </div>
 
@@ -74,13 +74,13 @@ const StrategicConsulting = () => {
             </div>
 
             <div className="bg-gradient-to-r from-pink-100 to-matcha-100 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Think Bigger?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('scCtaTitle')}</h3>
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                From startup pivots to corporate transformations—we provide the strategic clarity you need to win.
+                {t('scCtaDesc')}
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
-                Chart Your Course
-              </Link>
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Strategic Consulting Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in your Strategic Consulting services.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+                {t('scCtaButton')}
+              </a>
             </div>
           </div>
         </div>

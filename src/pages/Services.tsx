@@ -17,8 +17,8 @@ const Services = () => {
   const services = [
     {
       icon: Globe,
-      title: "Public Relations",
-      description: "Press coverage, media relations, and thought leadership that puts you where the world is watching.",
+      title: t('publicRelations'),
+      description: t('publicRelationsDesc'),
       gradient: "from-matcha-500 to-matcha-600",
       link: "/services/public-relations",
       image: publicRelationsImg,
@@ -26,8 +26,8 @@ const Services = () => {
     },
     {
       icon: Smartphone,
-      title: "Social Media Marketing",
-      description: "Scroll-stopping content, strategy, and management that builds communities and drives engagement.",
+      title: t('socialMediaMarketing'),
+      description: t('socialMediaMarketingDesc'),
       gradient: "from-amber-500 to-amber-600",
       link: "/services/social-media-marketing",
       image: socialMediaImg,
@@ -35,8 +35,8 @@ const Services = () => {
     },
     {
       icon: Star,
-      title: "Influencer Marketing",
-      description: "From nano to mega, we connect your brand with credible creators who convert.",
+      title: t('influencerMarketing'),
+      description: t('influencerMarketingDesc'),
       gradient: "from-pink-500 to-pink-600",
       link: "/services/influencer-marketing",
       image: influencerMarketingImg,
@@ -44,8 +44,8 @@ const Services = () => {
     },
     {
       icon: Target,
-      title: "Brand Development",
-      description: "Messaging, identity, and storytelling that captures the essence of your brand and fuels growth.",
+      title: t('brandDevelopment'),
+      description: t('brandDevelopmentDesc'),
       gradient: "from-matcha-600 to-amber-600",
       link: "/services/brand-development",
       image: brandDevelopmentImg,
@@ -53,8 +53,8 @@ const Services = () => {
     },
     {
       icon: Rocket,
-      title: "Launch Campaigns",
-      description: "Whether it's a product, brand, or idea—we design bold launches that make headlines.",
+      title: t('launchCampaigns'),
+      description: t('launchCampaignsDesc'),
       gradient: "from-amber-600 to-pink-600",
       link: "/services/launch-campaigns",
       image: launchCampaignsImg,
@@ -62,8 +62,8 @@ const Services = () => {
     },
     {
       icon: Brain,
-      title: "Strategic Consulting",
-      description: "Big-picture guidance for brands ready to evolve, pivot, or grow fast.",
+      title: t('strategicConsulting'),
+      description: t('strategicConsultingDesc'),
       gradient: "from-pink-600 to-matcha-600",
       link: "/services/strategic-consulting",
       image: strategicConsultingImg,
@@ -85,10 +85,7 @@ const Services = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tight">
-                PR. But Make It{' '}
-                <span className="bg-gradient-to-r from-matcha-600 via-amber-600 to-pink-600 bg-clip-text text-transparent">
-                  Future-Ready.
-                </span>
+                {t('servicesTitle')}
               </h1>
               
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -104,10 +101,10 @@ const Services = () => {
             
             <div className="mt-20 text-center">
               <p className="text-lg text-gray-600 mb-4">
-                <strong>Industries we serve:</strong> Beauty, Fashion, Real Estate, Tech, Wellness, Hospitality, Retail, and more.
+                <strong>{t('industriesWeServe')}:</strong> {t('beauty')}, {t('fashion')}, {t('realEstate')}, {t('tech')}, {t('wellness')}, {t('hospitality')}, {t('retail')}.
               </p>
               <p className="text-2xl font-bold bg-gradient-to-r from-matcha-600 to-amber-600 bg-clip-text text-transparent">
-                No limits. Just possibilities.
+                {t('noLimits')}
               </p>
             </div>
           </div>

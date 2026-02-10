@@ -26,7 +26,7 @@ const Header = ({ activeSection }: HeaderProps) => {
   const navItems = [
     { path: '/', section: 'hero', label: t('home') },
     { path: '/about', section: 'about', label: t('about') },
-    { path: '/startup-pr-kit', section: 'startup-kit', label: tr('startup.hero.label') || 'Startup PR Kit' },
+    { path: '/startup-pr-kit', section: 'startup-kit', label: tr('startup.hero.label') || 'PR Playbook' },
     { path: '/services', section: 'services', label: t('services') },
     { path: '/blog', section: 'blog', label: t('blog') },
     { path: '/contact', section: 'contact', label: t('contact') }
@@ -91,9 +91,9 @@ const Header = ({ activeSection }: HeaderProps) => {
 
           <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
             <LanguageToggle />
-            <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium">
+            <a href="mailto:pranjali@cosmocommspr.com?subject=PR Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'd like to discuss how your PR services can help my brand.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium">
               {t('letsTalk')}
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,9 +133,9 @@ const Header = ({ activeSection }: HeaderProps) => {
                 </Link>
               );
             })}
-            <Link to="/contact" className="block w-full bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium text-center">
+            <a href="mailto:pranjali@cosmocommspr.com?subject=PR Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'd like to discuss how your PR services can help my brand.%0D%0A%0D%0AThank you!" className="block w-full bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium text-center">
               {t('letsTalk')}
-            </Link>
+            </a>
           </nav>
         )}
       </div>

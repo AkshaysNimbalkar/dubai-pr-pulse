@@ -11,23 +11,23 @@ const BrandDevelopment = () => {
   const features = [
     {
       icon: Palette,
-      title: "Visual Identity",
-      description: "Stunning visual systems that capture your brand's essence and create instant recognition across all touchpoints."
+      title: t('bdVisualIdentity'),
+      description: t('bdVisualIdentityDesc')
     },
     {
       icon: MessageSquare,
-      title: "Brand Messaging",
-      description: "Compelling narratives and tone of voice that connect emotionally with your audience and differentiate you from competitors."
+      title: t('bdBrandMessaging'),
+      description: t('bdBrandMessagingDesc')
     },
     {
       icon: Eye,
-      title: "Brand Positioning",
-      description: "Strategic positioning that places your brand exactly where it needs to be in the minds of your target market."
+      title: t('bdBrandPositioning'),
+      description: t('bdBrandPositioningDesc')
     },
     {
       icon: Lightbulb,
-      title: "Brand Strategy",
-      description: "Comprehensive roadmaps that guide every brand decision and ensure consistent growth and evolution."
+      title: t('bdBrandStrategy'),
+      description: t('bdBrandStrategyDesc')
     }
   ];
 
@@ -44,7 +44,7 @@ const BrandDevelopment = () => {
           <div className="max-w-4xl mx-auto">
             <Link to="/services" className="inline-flex items-center text-matcha-600 hover:text-matcha-700 mb-8 group">
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Services
+              {t('backToServices')}
             </Link>
 
             <div className="text-center mb-16">
@@ -53,11 +53,11 @@ const BrandDevelopment = () => {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-matcha-600 to-amber-600 bg-clip-text text-transparent">
-                  Brand Development
+                  {t('brandDevelopment')}
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Your brand is more than a logo—it's a living, breathing entity that connects with hearts and minds. We craft compelling brand identities that don't just look good, but feel right, resonate deeply, and drive sustainable growth in competitive markets.
+                {t('bdPageDesc')}
               </p>
             </div>
 
@@ -74,13 +74,13 @@ const BrandDevelopment = () => {
             </div>
 
             <div className="bg-gradient-to-r from-matcha-100 to-amber-100 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Build Something Remarkable?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('bdCtaTitle')}</h3>
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                From startups finding their voice to established brands evolving for the future—we create identities that last.
+                {t('bdCtaDesc')}
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
-                Build Your Brand
-              </Link>
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Brand Development Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in your Brand Development services.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+                {t('bdCtaButton')}
+              </a>
             </div>
           </div>
         </div>

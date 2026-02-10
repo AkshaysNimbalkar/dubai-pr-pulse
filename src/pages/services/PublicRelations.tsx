@@ -11,23 +11,23 @@ const PublicRelations = () => {
   const features = [
     {
       icon: Newspaper,
-      title: "Media Relations",
-      description: "Strategic media outreach that gets your story in front of the right journalists at the right time."
+      title: t('prMediaRelations'),
+      description: t('prMediaRelationsDesc')
     },
     {
       icon: Users,
-      title: "Crisis Management",
-      description: "Swift, strategic response to protect and restore your brand's reputation when it matters most."
+      title: t('prCrisisManagement'),
+      description: t('prCrisisManagementDesc')
     },
     {
       icon: TrendingUp,
-      title: "Thought Leadership",
-      description: "Position your executives as industry experts through strategic content and speaking opportunities."
+      title: t('prThoughtLeadership'),
+      description: t('prThoughtLeadershipDesc')
     },
     {
       icon: Megaphone,
-      title: "Brand Storytelling",
-      description: "Craft compelling narratives that resonate with your audience and differentiate your brand."
+      title: t('prBrandStorytelling'),
+      description: t('prBrandStorytellingDesc')
     }
   ];
 
@@ -44,7 +44,7 @@ const PublicRelations = () => {
           <div className="max-w-4xl mx-auto">
             <Link to="/services" className="inline-flex items-center text-matcha-600 hover:text-matcha-700 mb-8 group">
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Services
+              {t('backToServices')}
             </Link>
 
             <div className="text-center mb-16">
@@ -53,11 +53,11 @@ const PublicRelations = () => {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-matcha-600 to-amber-600 bg-clip-text text-transparent">
-                  Public Relations
+                  {t('publicRelations')}
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                In today's hyper-connected world, your reputation is your currency. Our public relations expertise transforms brands into industry leaders through strategic storytelling, media mastery, and authentic relationship building. We don't just manage perceptions—we shape them.
+                {t('prPageDesc')}
               </p>
             </div>
 
@@ -74,13 +74,13 @@ const PublicRelations = () => {
             </div>
 
             <div className="bg-gradient-to-r from-matcha-100 to-amber-100 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Make Headlines?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('prCtaTitle')}</h3>
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                From startup launches to Fortune 500 reputation management, we've got the expertise to amplify your voice in the global conversation.
+                {t('prCtaDesc')}
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
-                Let's Talk Strategy
-              </Link>
+              <a href="mailto:pranjali@cosmocommspr.com?subject=Public Relations Inquiry&body=Hi CosmoComms Team,%0D%0A%0D%0AI'm interested in your Public Relations services.%0D%0A%0D%0AThank you!" className="bg-gradient-to-r from-matcha-500 via-amber-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+                {t('prCtaButton')}
+              </a>
             </div>
           </div>
         </div>
